@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <title>Paint</title>
+  </head>
+  <body class="main-app">
+    <h3>Try out following canvas</h3>
+    <canvas
+      id="paper"
+      width="500"
+      height="500"
+      style="border: 1px solid #000000"
+    >
+    </canvas>
+    <div class="menu">
+      <div class="colorpicker">
+        <strong>pick color</strong>
+        <input
+          type="color"
+          id="body"
+          name="body"
+          value="#000000"
+          onchange="setColor(event)"
+        />
+      </div>
+      <div class="brushSize">
+        <strong>Brush Side</strong>
+        <input
+          type="range"
+          min="1"
+          value="0"
+          max="100"
+          step="1"
+          onchange="setBrushSize(event)"
+        />
+      </div>
+      <button style="background-color: red; color: white" onclick="clearIt()">
+        Clear Screen
+      </button>
+    </div>
+    <script src="./assets/js/global.js"></script>
+    <script src="./assets/js/utilites.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
